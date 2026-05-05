@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>StatusCraft — Privacy Policy</title>
+<meta name="description" content="StatusCraft privacy policy. How we handle data, third-party services, your rights, and contact details.">
+<meta name="theme-color" content="#0F0A2E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-0:#0F0A2E;
+    --bg-1:#1B1144;
+    --surface:#FFFFFF;
+    --surface-2:#F7F5FF;
+    --ink-1:#0E1224;
+    --ink-2:#3A4256;
+    --ink-3:#5B6479;
+    --line:#E6E3F2;
+    --neon-pink:#FF4D9D;
+    --neon-violet:#9D4DFF;
+    --neon-cyan:#4DCAFF;
+    --neon-amber:#FFC04D;
+    --link:#2D6CDF;
+    --link-hover:#1D4FB0;
+    --radius-lg:22px;
+    --radius-md:14px;
+    --radius-sm:10px;
+    --shadow-1:0 1px 2px rgba(15,10,46,.06), 0 4px 16px rgba(15,10,46,.06);
+    --shadow-2:0 8px 30px rgba(15,10,46,.10);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--ink-1);
+    background:#FAF9FF;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--link);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px}
+  a:hover{color:var(--link-hover)}
+  .container{max-width:880px;margin:0 auto;padding:0 24px}
+
+  /* Hero */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(900px 500px at 80% -10%, rgba(255,77,157,.45) 0, transparent 60%),
+      radial-gradient(700px 500px at 0% 30%, rgba(157,77,255,.45) 0, transparent 60%),
+      linear-gradient(160deg, var(--bg-0) 0%, var(--bg-1) 100%);
+    color:#fff;
+    padding:80px 0 110px;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .hero::before, .hero::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(60px);
+    opacity:.55;
+    z-index:-1;
+  }
+  .hero::before{width:280px;height:280px;background:var(--neon-cyan);top:60%;left:-60px}
+  .hero::after{width:240px;height:240px;background:var(--neon-amber);top:8%;right:-40px}
+  .brand{
+    display:flex;align-items:center;gap:14px;margin-bottom:32px;
+  }
+  .logo{
+    width:52px;height:52px;border-radius:14px;
+    background:conic-gradient(from 220deg, #FF4D9D, #9D4DFF, #4DCAFF, #FF4D9D);
+    display:grid;place-items:center;font-weight:800;color:#fff;font-size:22px;
+    box-shadow:0 10px 30px rgba(255,77,157,.35);
+  }
+  .brand-name{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:22px;font-weight:700;letter-spacing:.4px;
+  }
+  .hero h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(40px,6vw,68px);
+    font-weight:800;letter-spacing:-.5px;
+    line-height:1.05;margin:0 0 18px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    background:linear-gradient(90deg,#FF80B5,#FFC04D);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.lede{
+    font-size:18px;color:rgba(255,255,255,.85);max-width:620px;margin:0;
+  }
+  .meta{
+    display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;
+  }
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:8px 14px;border-radius:999px;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.20);
+    font-size:13px;font-weight:500;color:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);
+  }
+  .pill .dot{width:6px;height:6px;border-radius:50%;background:#4DFFAF;box-shadow:0 0 12px #4DFFAF}
+
+  /* Body wrap */
+  main.wrap{
+    margin-top:-60px;padding-bottom:100px;
+  }
+  .card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg);
+    padding:36px 36px;
+    box-shadow:var(--shadow-2);
+  }
+  .card + .card{margin-top:18px}
+  h2{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:24px;font-weight:700;letter-spacing:-.2px;
+    margin:0 0 14px;display:flex;align-items:center;gap:12px;
+  }
+  h2 .num{
+    width:30px;height:30px;border-radius:9px;
+    display:grid;place-items:center;font-size:13px;font-weight:700;
+    background:linear-gradient(135deg,rgba(255,77,157,.15),rgba(157,77,255,.15));
+    color:var(--neon-violet);
+  }
+  h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:16px;font-weight:600;margin:22px 0 8px;
+  }
+  p{margin:0 0 12px;color:var(--ink-2);font-size:15.5px}
+  ul{margin:6px 0 12px;padding:0 0 0 20px;color:var(--ink-2)}
+  ul li{margin:6px 0}
+  .toc{
+    position:sticky;top:0;
+    background:rgba(247,245,255,.85);backdrop-filter:blur(14px);
+    z-index:10;
+    border-bottom:1px solid var(--line);
+    padding:14px 0;
+    margin-bottom:30px;
+  }
+  .toc-inner{
+    display:flex;gap:8px;overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .toc-inner::-webkit-scrollbar{display:none}
+  .toc a{
+    flex:0 0 auto;
+    padding:8px 14px;border-radius:999px;
+    background:#fff;border:1px solid var(--line);
+    color:var(--ink-2);font-size:13px;font-weight:500;
+    text-decoration:none;white-space:nowrap;
+  }
+  .toc a:hover{border-color:var(--neon-violet);color:var(--neon-violet)}
+  .updated{color:var(--ink-3);font-size:13px;margin-top:8px}
+
+  /* Footer / contact */
+  .contact{
+    background:linear-gradient(135deg, rgba(255,77,157,.08), rgba(157,77,255,.08));
+    border:1px solid rgba(157,77,255,.18);
+    border-radius:var(--radius-lg);
+    padding:30px;
+    margin-top:18px;
+    text-align:center;
+  }
+  .contact h2{justify-content:center}
+  .contact a.email{
+    display:inline-block;margin-top:10px;
+    background:linear-gradient(90deg, #FF4D9D, #9D4DFF);
+    color:#fff;padding:12px 22px;border-radius:14px;
+    font-weight:600;text-decoration:none;
+    box-shadow:0 12px 28px rgba(157,77,255,.30);
+  }
+  .contact a.email:hover{filter:brightness(1.06)}
+  .footer{
+    text-align:center;padding:30px 0 0;color:var(--ink-3);font-size:13px;
+  }
+
+  /* Service grid */
+  .services{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:12px;margin:14px 0 4px;
+  }
+  .svc{
+    border:1px solid var(--line);border-radius:14px;padding:14px;
+    background:var(--surface-2);
+  }
+  .svc strong{display:block;font-size:14.5px;color:var(--ink-1);margin-bottom:4px}
+  .svc small{color:var(--ink-3);font-size:12.5px;line-height:1.5}
+
+  @media (max-width:640px){
+    .card{padding:26px 22px;border-radius:18px}
+    .hero{padding:60px 0 90px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div class="brand">
+      <div class="logo">SC</div>
+      <div class="brand-name">StatusCraft</div>
+    </div>
+    <h1>Privacy <em>Policy</em></h1>
+    <p class="lede">
+      We built StatusCraft to be respectful with your data. This page explains what we collect,
+      what we don't, and exactly which third-party services we rely on.
+    </p>
+    <div class="meta">
+      <span class="pill"><span class="dot"></span> Effective May 5, 2026</span>
+      <span class="pill">Developer · ArtSahir</span>
+      <span class="pill">English</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="container">
+
+    <nav class="toc" aria-label="Sections">
+      <div class="toc-inner">
+        <a href="#intro">Introduction</a>
+        <a href="#collect">What we collect</a>
+        <a href="#use">How we use it</a>
+        <a href="#third">Third-party services</a>
+        <a href="#ads">Ads &amp; consent</a>
+        <a href="#storage">Storage</a>
+        <a href="#children">Children</a>
+        <a href="#rights">Your rights</a>
+        <a href="#security">Security</a>
+        <a href="#changes">Changes</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="card" id="intro">
+      <h2><span class="num">01</span> Introduction</h2>
+      <p>
+        StatusCraft (the &ldquo;app&rdquo;) is published by <strong>ArtSahir</strong>. This policy
+        describes the personal information we handle when you use the app on Android, the choices you
+        have, and the third-party services that power features such as cloud sync, advertising, and
+        crash reporting. By using StatusCraft you agree to the practices described here.
+      </p>
+      <p class="updated">Last updated: May 5, 2026.</p>
+    </section>
+
+    <section class="card" id="collect">
+      <h2><span class="num">02</span> What we collect</h2>
+      <p>
+        StatusCraft works without an account, so we do not ask for your name, phone number, address
+        book, or location. The data the app does see falls into three buckets:
+      </p>
+      <h3>On-device data (never leaves your phone)</h3>
+      <ul>
+        <li>Your favorites, diary notes, daily schedules, and theme/notification preferences are stored locally using Android's <a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank" rel="noopener">DataStore</a> and Room database.</li>
+        <li>The list of dismissed in-app notifications and recent search categories.</li>
+      </ul>
+      <h3>Aggregate, non-identifying data sent to our backend</h3>
+      <ul>
+        <li>Anonymous share/copy counts per phrase so we can show a global &ldquo;Most shared&rdquo; section. We use <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Firestore</a> for this. No user id is attached.</li>
+      </ul>
+      <h3>Diagnostic &amp; analytics data (only after you opt in)</h3>
+      <ul>
+        <li>Crash logs via <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a> and aggregate event counters via <a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Google Analytics for Firebase</a>. Both stay disabled until you flip the &ldquo;Usage analytics&rdquo; toggle in <em>Settings</em>.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="use">
+      <h2><span class="num">03</span> How we use it</h2>
+      <p>
+        We use the data above strictly to operate, secure, and improve StatusCraft &mdash; never to
+        build advertising profiles or sell information. Specifically:
+      </p>
+      <ul>
+        <li>Display the content you requested (greetings, quotes, notes).</li>
+        <li>Remember the language, theme, and feature preferences you set.</li>
+        <li>Surface community trends like the &ldquo;Most shared&rdquo; rail.</li>
+        <li>Diagnose crashes so we can ship fixes (only with your consent).</li>
+        <li>Show ads to keep the app free (see section 05).</li>
+      </ul>
+    </section>
+
+    <section class="card" id="third">
+      <h2><span class="num">04</span> Third-party services</h2>
+      <p>
+        StatusCraft integrates a small number of vetted services. Each one has its own policy that
+        you may review by tapping its name below.
+      </p>
+      <div class="services">
+        <div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></strong><small>Required Android system services on the device.</small></div>
+        <div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a></strong><small>Firestore, Remote Config, App Check, Cloud Messaging.</small></div>
+        <div class="svc"><strong><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a></strong><small>Banner, interstitial, native and app-open ads.</small></div>
+        <div class="svc"><strong><a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP SDK</a></strong><small>EU/UK/CH consent form for personalized ads.</small></div>
+        <div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a></strong><small>Crash and ANR reports (opt-in).</small></div>
+        <div class="svc"><strong><a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Analytics for Firebase</a></strong><small>Aggregate usage events (opt-in).</small></div>
+        <div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Play Integrity API</a></strong><small>App-Check attestation; verifies the app is genuine.</small></div>
+      </div>
+    </section>
+
+    <section class="card" id="ads">
+      <h2><span class="num">05</span> Ads &amp; consent</h2>
+      <p>
+        StatusCraft shows ads through <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a>. AdMob may collect a limited set of identifiers
+        (such as the Android Advertising ID, IP address, and ad-interaction events) to show ads and
+        measure performance. If you live in the European Economic Area, the United Kingdom, or
+        Switzerland, the app uses the <a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP consent form</a> the first time you launch it. You can revisit
+        your choice at any time from <em>Settings &rarr; Manage ad preferences</em> when applicable.
+      </p>
+      <p>
+        Android 13 (API 33) and above gives you a system-level &ldquo;Delete advertising ID&rdquo; switch
+        in <em>Settings &rarr; Privacy &rarr; Ads</em>. We honour that signal automatically.
+      </p>
+    </section>
+
+    <section class="card" id="storage">
+      <h2><span class="num">06</span> Storage &amp; retention</h2>
+      <p>
+        Local data lives only on your device and is wiped when you uninstall the app or clear its
+        storage. Anonymous share counts written to <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firestore</a> are retained for as long as the
+        feature is operational. Crash and analytics events follow Firebase's default retention windows,
+        which you can read about in <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy and security center</a>.
+      </p>
+    </section>
+
+    <section class="card" id="children">
+      <h2><span class="num">07</span> Children</h2>
+      <p>
+        StatusCraft is not directed at children under 13. We do not knowingly collect personal
+        information from children. If you believe a child has used the app and provided data to a
+        third-party service such as <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a>, please email us and we will help take appropriate
+        action.
+      </p>
+    </section>
+
+    <section class="card" id="rights">
+      <h2><span class="num">08</span> Your rights</h2>
+      <p>
+        Depending on where you live, you may have rights under the <a href="https://gdpr-info.eu/" target="_blank" rel="noopener">GDPR</a>, the <a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener">CCPA</a>, or similar local laws &mdash; to access, correct, delete, port, or restrict
+        the data we hold about you, and to withdraw any consent you previously gave. Because
+        StatusCraft does not store personally-identifying records on the server side, the most direct
+        way to exercise these rights is to:
+      </p>
+      <ul>
+        <li>Toggle off &ldquo;Usage analytics&rdquo; in <em>Settings</em> to stop Crashlytics &amp; Analytics collection going forward.</li>
+        <li>Use Android's &ldquo;Delete advertising ID&rdquo; control to disable personalized ads.</li>
+        <li>Uninstall the app to remove all local data.</li>
+        <li>Email us at the address below for any further request.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="security">
+      <h2><span class="num">09</span> Security</h2>
+      <p>
+        Traffic between the app and Firebase travels over TLS 1.2+. We use <a href="https://firebase.google.com/docs/app-check" target="_blank" rel="noopener">Firebase App Check</a> with
+        the <a href="https://developer.android.com/google/play/integrity" target="_blank" rel="noopener">Play Integrity API</a> to verify that requests come from a genuine, unmodified
+        StatusCraft install. While we apply industry-standard safeguards, no system is perfectly
+        secure; please do not store sensitive secrets in your notes.
+      </p>
+    </section>
+
+    <section class="card" id="changes">
+      <h2><span class="num">10</span> Changes to this policy</h2>
+      <p>
+        When we change anything material we update the &ldquo;Last updated&rdquo; date at the top and
+        publish the new version at the same URL. Continued use of StatusCraft after a revision means
+        you accept the revised policy.
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2><span class="num">11</span> Contact us</h2>
+      <p>Questions, requests, or concerns? Reach out and we&rsquo;ll respond within a reasonable time.</p>
+      <a class="email" href="mailto:artsahirsupport@gmail.com">artsahirsupport@gmail.com</a>
+    </section>
+
+    <p class="footer">© 2026 ArtSahir · StatusCraft</p>
+  </div>
+</main>
+
+</body>
+</html>
