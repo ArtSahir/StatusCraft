@@ -1,389 +1,677 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="root">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>StatusCraft — Privacy Policy</title>
-<meta name="description" content="StatusCraft privacy policy. How we handle data, third-party services, your rights, and contact details.">
+<meta name="description" content="StatusCraft privacy policy by CONPLY. How we handle data, third-party services, your rights, and contact details.">
 <meta name="theme-color" content="#0F0A2E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=Cairo:wght@500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg-0:#0F0A2E;
-    --bg-1:#1B1144;
-    --surface:#FFFFFF;
-    --surface-2:#F7F5FF;
-    --ink-1:#0E1224;
-    --ink-2:#3A4256;
-    --ink-3:#5B6479;
+    --bg-0:#0F0A2E;--bg-1:#1B1144;
+    --surface:#fff;--surface-2:#F7F5FF;
+    --ink-1:#0E1224;--ink-2:#3A4256;--ink-3:#5B6479;
     --line:#E6E3F2;
-    --neon-pink:#FF4D9D;
-    --neon-violet:#9D4DFF;
-    --neon-cyan:#4DCAFF;
-    --neon-amber:#FFC04D;
-    --link:#2D6CDF;
-    --link-hover:#1D4FB0;
-    --radius-lg:22px;
-    --radius-md:14px;
-    --radius-sm:10px;
-    --shadow-1:0 1px 2px rgba(15,10,46,.06), 0 4px 16px rgba(15,10,46,.06);
+    --neon-pink:#FF4D9D;--neon-violet:#9D4DFF;--neon-cyan:#4DCAFF;--neon-amber:#FFC04D;
+    --link:#2D6CDF;--link-hover:#1D4FB0;
+    --radius-lg:22px;--radius-sm:10px;
     --shadow-2:0 8px 30px rgba(15,10,46,.10);
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
-  body{
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-    color:var(--ink-1);
-    background:#FAF9FF;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
+  body{font-family:'Inter',sans-serif;color:var(--ink-1);background:#FAF9FF;line-height:1.65;-webkit-font-smoothing:antialiased}
+  html[lang="ar"] body{font-family:'Cairo','Inter',sans-serif;direction:rtl;text-align:right}
   a{color:var(--link);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px}
   a:hover{color:var(--link-hover)}
   .container{max-width:880px;margin:0 auto;padding:0 24px}
 
-  /* Hero */
+  .langbar{
+    position:sticky;top:0;z-index:20;
+    background:rgba(15,10,46,.92);backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.10);
+  }
+  .langbar-inner{display:flex;gap:6px;overflow-x:auto;padding:10px 24px;scrollbar-width:none}
+  .langbar-inner::-webkit-scrollbar{display:none}
+  .langbtn{
+    flex:0 0 auto;border:1px solid rgba(255,255,255,.20);
+    background:rgba(255,255,255,.06);color:#fff;
+    padding:7px 14px;border-radius:999px;font-size:13px;font-weight:500;
+    cursor:pointer;transition:all .15s;font-family:inherit;white-space:nowrap;
+  }
+  .langbtn:hover{background:rgba(255,255,255,.14)}
+  .langbtn.active{background:linear-gradient(90deg,#FF4D9D,#9D4DFF);border-color:transparent;font-weight:700}
+
   .hero{
     position:relative;
-    background:
-      radial-gradient(900px 500px at 80% -10%, rgba(255,77,157,.45) 0, transparent 60%),
-      radial-gradient(700px 500px at 0% 30%, rgba(157,77,255,.45) 0, transparent 60%),
-      linear-gradient(160deg, var(--bg-0) 0%, var(--bg-1) 100%);
-    color:#fff;
-    padding:80px 0 110px;
-    overflow:hidden;
-    isolation:isolate;
+    background:radial-gradient(900px 500px at 80% -10%,rgba(255,77,157,.45) 0,transparent 60%),
+      radial-gradient(700px 500px at 0% 30%,rgba(157,77,255,.45) 0,transparent 60%),
+      linear-gradient(160deg,var(--bg-0) 0%,var(--bg-1) 100%);
+    color:#fff;padding:72px 0 110px;overflow:hidden;isolation:isolate;
   }
-  .hero::before, .hero::after{
-    content:"";
-    position:absolute;
-    border-radius:50%;
-    filter:blur(60px);
-    opacity:.55;
-    z-index:-1;
-  }
+  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;z-index:-1}
   .hero::before{width:280px;height:280px;background:var(--neon-cyan);top:60%;left:-60px}
   .hero::after{width:240px;height:240px;background:var(--neon-amber);top:8%;right:-40px}
-  .brand{
-    display:flex;align-items:center;gap:14px;margin-bottom:32px;
-  }
+  .brand{display:flex;align-items:center;gap:14px;margin-bottom:30px}
+  html[lang="ar"] .brand{flex-direction:row-reverse}
   .logo{
     width:52px;height:52px;border-radius:14px;
-    background:conic-gradient(from 220deg, #FF4D9D, #9D4DFF, #4DCAFF, #FF4D9D);
+    background:conic-gradient(from 220deg,#FF4D9D,#9D4DFF,#4DCAFF,#FF4D9D);
     display:grid;place-items:center;font-weight:800;color:#fff;font-size:22px;
     box-shadow:0 10px 30px rgba(255,77,157,.35);
   }
-  .brand-name{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:22px;font-weight:700;letter-spacing:.4px;
-  }
-  .hero h1{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:clamp(40px,6vw,68px);
-    font-weight:800;letter-spacing:-.5px;
-    line-height:1.05;margin:0 0 18px;
-  }
-  .hero h1 em{
-    font-style:normal;
-    background:linear-gradient(90deg,#FF80B5,#FFC04D);
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-  }
-  .hero p.lede{
-    font-size:18px;color:rgba(255,255,255,.85);max-width:620px;margin:0;
-  }
-  .meta{
-    display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;
-  }
-  .pill{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:8px 14px;border-radius:999px;
-    background:rgba(255,255,255,.10);
-    border:1px solid rgba(255,255,255,.20);
-    font-size:13px;font-weight:500;color:rgba(255,255,255,.92);
-    backdrop-filter:blur(8px);
-  }
+  .brand-name{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;letter-spacing:.4px}
+  html[lang="ar"] .brand-name{font-family:'Cairo',sans-serif}
+  .hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(38px,6vw,64px);font-weight:800;letter-spacing:-.5px;line-height:1.05;margin:0 0 18px}
+  html[lang="ar"] .hero h1{font-family:'Cairo',sans-serif}
+  .hero h1 em{font-style:normal;background:linear-gradient(90deg,#FF80B5,#FFC04D);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lede{font-size:17px;color:rgba(255,255,255,.85);max-width:620px;margin:0}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);font-size:13px;font-weight:500;color:rgba(255,255,255,.92);backdrop-filter:blur(8px)}
   .pill .dot{width:6px;height:6px;border-radius:50%;background:#4DFFAF;box-shadow:0 0 12px #4DFFAF}
 
-  /* Body wrap */
-  main.wrap{
-    margin-top:-60px;padding-bottom:100px;
-  }
-  .card{
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:var(--radius-lg);
-    padding:36px 36px;
-    box-shadow:var(--shadow-2);
-  }
-  .card + .card{margin-top:18px}
-  h2{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:24px;font-weight:700;letter-spacing:-.2px;
-    margin:0 0 14px;display:flex;align-items:center;gap:12px;
-  }
-  h2 .num{
-    width:30px;height:30px;border-radius:9px;
-    display:grid;place-items:center;font-size:13px;font-weight:700;
-    background:linear-gradient(135deg,rgba(255,77,157,.15),rgba(157,77,255,.15));
-    color:var(--neon-violet);
-  }
-  h3{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:16px;font-weight:600;margin:22px 0 8px;
-  }
+  main.wrap{margin-top:-60px;padding-bottom:100px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow-2)}
+  .card+.card{margin-top:18px}
+  h2{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;margin:0 0 14px;display:flex;align-items:center;gap:12px}
+  html[lang="ar"] h2{font-family:'Cairo',sans-serif;flex-direction:row-reverse}
+  h2 .num{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:13px;font-weight:700;background:linear-gradient(135deg,rgba(255,77,157,.15),rgba(157,77,255,.15));color:var(--neon-violet);font-family:'Inter',sans-serif}
+  h3{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;margin:20px 0 8px}
+  html[lang="ar"] h3{font-family:'Cairo',sans-serif}
   p{margin:0 0 12px;color:var(--ink-2);font-size:15.5px}
-  ul{margin:6px 0 12px;padding:0 0 0 20px;color:var(--ink-2)}
+  ul{margin:6px 0 12px;padding-inline-start:20px;color:var(--ink-2)}
   ul li{margin:6px 0}
-  .toc{
-    position:sticky;top:0;
-    background:rgba(247,245,255,.85);backdrop-filter:blur(14px);
-    z-index:10;
-    border-bottom:1px solid var(--line);
-    padding:14px 0;
-    margin-bottom:30px;
-  }
-  .toc-inner{
-    display:flex;gap:8px;overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
-  }
-  .toc-inner::-webkit-scrollbar{display:none}
-  .toc a{
-    flex:0 0 auto;
-    padding:8px 14px;border-radius:999px;
-    background:#fff;border:1px solid var(--line);
-    color:var(--ink-2);font-size:13px;font-weight:500;
-    text-decoration:none;white-space:nowrap;
-  }
-  .toc a:hover{border-color:var(--neon-violet);color:var(--neon-violet)}
   .updated{color:var(--ink-3);font-size:13px;margin-top:8px}
 
-  /* Footer / contact */
-  .contact{
-    background:linear-gradient(135deg, rgba(255,77,157,.08), rgba(157,77,255,.08));
-    border:1px solid rgba(157,77,255,.18);
-    border-radius:var(--radius-lg);
-    padding:30px;
-    margin-top:18px;
-    text-align:center;
-  }
+  .contact{background:linear-gradient(135deg,rgba(255,77,157,.08),rgba(157,77,255,.08));border:1px solid rgba(157,77,255,.18);border-radius:var(--radius-lg);padding:30px;margin-top:18px;text-align:center}
   .contact h2{justify-content:center}
-  .contact a.email{
-    display:inline-block;margin-top:10px;
-    background:linear-gradient(90deg, #FF4D9D, #9D4DFF);
-    color:#fff;padding:12px 22px;border-radius:14px;
-    font-weight:600;text-decoration:none;
-    box-shadow:0 12px 28px rgba(157,77,255,.30);
-  }
+  .contact a.email{display:inline-block;margin-top:10px;background:linear-gradient(90deg,#FF4D9D,#9D4DFF);color:#fff;padding:12px 22px;border-radius:14px;font-weight:600;text-decoration:none;box-shadow:0 12px 28px rgba(157,77,255,.30)}
   .contact a.email:hover{filter:brightness(1.06)}
-  .footer{
-    text-align:center;padding:30px 0 0;color:var(--ink-3);font-size:13px;
-  }
+  .footer{text-align:center;padding:28px 0 0;color:var(--ink-3);font-size:13px}
 
-  /* Service grid */
-  .services{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-    gap:12px;margin:14px 0 4px;
-  }
-  .svc{
-    border:1px solid var(--line);border-radius:14px;padding:14px;
-    background:var(--surface-2);
-  }
+  .services{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:14px 0 4px}
+  .svc{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--surface-2)}
   .svc strong{display:block;font-size:14.5px;color:var(--ink-1);margin-bottom:4px}
   .svc small{color:var(--ink-3);font-size:12.5px;line-height:1.5}
 
-  @media (max-width:640px){
-    .card{padding:26px 22px;border-radius:18px}
-    .hero{padding:60px 0 90px}
-  }
+  .lang-section{display:none}
+  .lang-section.active{display:block}
+
+  @media (max-width:640px){.card{padding:24px 20px;border-radius:18px}.hero{padding:56px 0 90px}}
 </style>
 </head>
 <body>
 
+<div class="langbar">
+  <div class="langbar-inner">
+    <button class="langbtn active" data-lang="en">🇬🇧 English</button>
+    <button class="langbtn" data-lang="ar">🇸🇦 العربية</button>
+    <button class="langbtn" data-lang="es">🇪🇸 Español</button>
+    <button class="langbtn" data-lang="fr">🇫🇷 Français</button>
+    <button class="langbtn" data-lang="it">🇮🇹 Italiano</button>
+    <button class="langbtn" data-lang="pt">🇧🇷 Português</button>
+    <button class="langbtn" data-lang="de">🇩🇪 Deutsch</button>
+    <button class="langbtn" data-lang="tr">🇹🇷 Türkçe</button>
+  </div>
+</div>
+
+<!-- ========== ENGLISH ========== -->
+<section class="lang-section active" data-lang-section="en">
 <header class="hero">
   <div class="container">
-    <div class="brand">
-      <div class="logo">SC</div>
-      <div class="brand-name">StatusCraft</div>
-    </div>
+    <div class="brand"><div class="logo">SC</div><div class="brand-name">StatusCraft</div></div>
     <h1>Privacy <em>Policy</em></h1>
-    <p class="lede">
-      We built StatusCraft to be respectful with your data. This page explains what we collect,
-      what we don't, and exactly which third-party services we rely on.
-    </p>
+    <p class="lede">StatusCraft is built to be respectful with your data. This page explains what we collect, what we don't, and the third-party services we rely on.</p>
     <div class="meta">
-      <span class="pill"><span class="dot"></span> Effective May 5, 2026</span>
-      <span class="pill">Developer · ArtSahir</span>
-      <span class="pill">English</span>
+      <span class="pill"><span class="dot"></span> Effective May 6, 2026</span>
+      <span class="pill">Developer · CONPLY</span>
     </div>
   </div>
 </header>
+<main class="wrap"><div class="container">
+<div class="card"><h2><span class="num">01</span> Introduction</h2>
+<p>StatusCraft (&ldquo;the app&rdquo;) is published by <strong>CONPLY</strong>, operated by <strong>EL MAGHNOUJI HABIL</strong> (Morocco). This policy describes the personal information we handle when you use the app on Android, the choices you have, and the third-party services that power features such as cloud sync, advertising, and crash reporting. By using StatusCraft you agree to the practices described here.</p>
+<p class="updated">Last updated: May 6, 2026.</p></div>
 
-<main class="wrap">
-  <div class="container">
+<div class="card"><h2><span class="num">02</span> What we collect</h2>
+<p>StatusCraft works without an account, so we do not ask for your name, phone number, address book, or location. The data the app does see falls into three buckets:</p>
+<h3>On-device data (never leaves your phone)</h3>
+<ul><li>Favorites, diary notes, daily schedules, and theme/notification preferences are stored locally using Android <a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank" rel="noopener">DataStore</a> and Room database.</li><li>The list of dismissed in-app notifications and recent search categories.</li></ul>
+<h3>Aggregate, non-identifying data sent to our backend</h3>
+<ul><li>Anonymous share/copy counts per phrase so we can show a global &ldquo;Most shared&rdquo; section. We use <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Firestore</a> for this. No user id is attached.</li></ul>
+<h3>Diagnostic &amp; analytics data (only after you opt in)</h3>
+<ul><li>Crash logs via <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a> and aggregate event counters via <a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Google Analytics for Firebase</a>. Both stay disabled until you flip the &ldquo;Usage analytics&rdquo; toggle in <em>Settings</em>.</li></ul></div>
 
-    <nav class="toc" aria-label="Sections">
-      <div class="toc-inner">
-        <a href="#intro">Introduction</a>
-        <a href="#collect">What we collect</a>
-        <a href="#use">How we use it</a>
-        <a href="#third">Third-party services</a>
-        <a href="#ads">Ads &amp; consent</a>
-        <a href="#storage">Storage</a>
-        <a href="#children">Children</a>
-        <a href="#rights">Your rights</a>
-        <a href="#security">Security</a>
-        <a href="#changes">Changes</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+<div class="card"><h2><span class="num">03</span> How we use it</h2>
+<p>We use the data above strictly to operate, secure, and improve StatusCraft &mdash; never to build advertising profiles or sell information. Specifically:</p>
+<ul><li>Display the content you requested.</li><li>Remember your language, theme, and feature preferences.</li><li>Surface community trends like the &ldquo;Most shared&rdquo; rail.</li><li>Diagnose crashes (only with your consent).</li><li>Show ads to keep the app free.</li></ul></div>
 
-    <section class="card" id="intro">
-      <h2><span class="num">01</span> Introduction</h2>
-      <p>
-        StatusCraft (the &ldquo;app&rdquo;) is published by <strong>ArtSahir</strong>. This policy
-        describes the personal information we handle when you use the app on Android, the choices you
-        have, and the third-party services that power features such as cloud sync, advertising, and
-        crash reporting. By using StatusCraft you agree to the practices described here.
-      </p>
-      <p class="updated">Last updated: May 5, 2026.</p>
-    </section>
+<div class="card"><h2><span class="num">04</span> Third-party services</h2>
+<p>StatusCraft integrates a small number of vetted services. Each one has its own policy:</p>
+<div class="services">
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></strong><small>Required Android system services on the device.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a></strong><small>Firestore, Remote Config, App Check, Cloud Messaging.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a></strong><small>Banner, interstitial, native and app-open ads.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP SDK</a></strong><small>EU/UK/CH consent form for personalized ads.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a></strong><small>Crash and ANR reports (opt-in).</small></div>
+<div class="svc"><strong><a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Analytics for Firebase</a></strong><small>Aggregate usage events (opt-in).</small></div>
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Play Integrity API</a></strong><small>App-Check attestation; verifies the app is genuine.</small></div>
+</div></div>
 
-    <section class="card" id="collect">
-      <h2><span class="num">02</span> What we collect</h2>
-      <p>
-        StatusCraft works without an account, so we do not ask for your name, phone number, address
-        book, or location. The data the app does see falls into three buckets:
-      </p>
-      <h3>On-device data (never leaves your phone)</h3>
-      <ul>
-        <li>Your favorites, diary notes, daily schedules, and theme/notification preferences are stored locally using Android's <a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank" rel="noopener">DataStore</a> and Room database.</li>
-        <li>The list of dismissed in-app notifications and recent search categories.</li>
-      </ul>
-      <h3>Aggregate, non-identifying data sent to our backend</h3>
-      <ul>
-        <li>Anonymous share/copy counts per phrase so we can show a global &ldquo;Most shared&rdquo; section. We use <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Firestore</a> for this. No user id is attached.</li>
-      </ul>
-      <h3>Diagnostic &amp; analytics data (only after you opt in)</h3>
-      <ul>
-        <li>Crash logs via <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a> and aggregate event counters via <a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Google Analytics for Firebase</a>. Both stay disabled until you flip the &ldquo;Usage analytics&rdquo; toggle in <em>Settings</em>.</li>
-      </ul>
-    </section>
+<div class="card"><h2><span class="num">05</span> Ads &amp; consent</h2>
+<p>StatusCraft shows ads through <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a>. AdMob may collect a limited set of identifiers (Android Advertising ID, IP address, ad-interaction events) to show ads and measure performance. If you live in the EEA, UK, or Switzerland, the app uses the <a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP consent form</a> on first launch. Android 13+ &ldquo;Delete advertising ID&rdquo; switch in <em>Settings &rarr; Privacy &rarr; Ads</em> is honoured automatically.</p></div>
 
-    <section class="card" id="use">
-      <h2><span class="num">03</span> How we use it</h2>
-      <p>
-        We use the data above strictly to operate, secure, and improve StatusCraft &mdash; never to
-        build advertising profiles or sell information. Specifically:
-      </p>
-      <ul>
-        <li>Display the content you requested (greetings, quotes, notes).</li>
-        <li>Remember the language, theme, and feature preferences you set.</li>
-        <li>Surface community trends like the &ldquo;Most shared&rdquo; rail.</li>
-        <li>Diagnose crashes so we can ship fixes (only with your consent).</li>
-        <li>Show ads to keep the app free (see section 05).</li>
-      </ul>
-    </section>
+<div class="card"><h2><span class="num">06</span> Storage &amp; retention</h2>
+<p>Local data lives only on your device and is wiped when you uninstall or clear storage. Anonymous share counts in <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firestore</a> are retained as long as the feature is operational. Crash and analytics events follow Firebase's default retention windows.</p></div>
 
-    <section class="card" id="third">
-      <h2><span class="num">04</span> Third-party services</h2>
-      <p>
-        StatusCraft integrates a small number of vetted services. Each one has its own policy that
-        you may review by tapping its name below.
-      </p>
-      <div class="services">
-        <div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></strong><small>Required Android system services on the device.</small></div>
-        <div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a></strong><small>Firestore, Remote Config, App Check, Cloud Messaging.</small></div>
-        <div class="svc"><strong><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a></strong><small>Banner, interstitial, native and app-open ads.</small></div>
-        <div class="svc"><strong><a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP SDK</a></strong><small>EU/UK/CH consent form for personalized ads.</small></div>
-        <div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a></strong><small>Crash and ANR reports (opt-in).</small></div>
-        <div class="svc"><strong><a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Analytics for Firebase</a></strong><small>Aggregate usage events (opt-in).</small></div>
-        <div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Play Integrity API</a></strong><small>App-Check attestation; verifies the app is genuine.</small></div>
-      </div>
-    </section>
+<div class="card"><h2><span class="num">07</span> Children</h2>
+<p>StatusCraft is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has used the app and provided data to a third-party service such as <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a>, please email us.</p></div>
 
-    <section class="card" id="ads">
-      <h2><span class="num">05</span> Ads &amp; consent</h2>
-      <p>
-        StatusCraft shows ads through <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a>. AdMob may collect a limited set of identifiers
-        (such as the Android Advertising ID, IP address, and ad-interaction events) to show ads and
-        measure performance. If you live in the European Economic Area, the United Kingdom, or
-        Switzerland, the app uses the <a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP consent form</a> the first time you launch it. You can revisit
-        your choice at any time from <em>Settings &rarr; Manage ad preferences</em> when applicable.
-      </p>
-      <p>
-        Android 13 (API 33) and above gives you a system-level &ldquo;Delete advertising ID&rdquo; switch
-        in <em>Settings &rarr; Privacy &rarr; Ads</em>. We honour that signal automatically.
-      </p>
-    </section>
+<div class="card"><h2><span class="num">08</span> Your rights</h2>
+<p>Depending on where you live, you may have rights under the <a href="https://gdpr-info.eu/" target="_blank" rel="noopener">GDPR</a>, the <a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener">CCPA</a>, or similar local laws. To exercise these rights:</p>
+<ul><li>Toggle off &ldquo;Usage analytics&rdquo; in <em>Settings</em> to stop collection.</li><li>Use Android's &ldquo;Delete advertising ID&rdquo; control to disable personalized ads.</li><li>Uninstall the app to remove all local data.</li><li>Email us at the address below for any further request.</li></ul></div>
 
-    <section class="card" id="storage">
-      <h2><span class="num">06</span> Storage &amp; retention</h2>
-      <p>
-        Local data lives only on your device and is wiped when you uninstall the app or clear its
-        storage. Anonymous share counts written to <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firestore</a> are retained for as long as the
-        feature is operational. Crash and analytics events follow Firebase's default retention windows,
-        which you can read about in <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy and security center</a>.
-      </p>
-    </section>
+<div class="card"><h2><span class="num">09</span> Security</h2>
+<p>Traffic between the app and Firebase travels over TLS 1.2+. We use <a href="https://firebase.google.com/docs/app-check" target="_blank" rel="noopener">Firebase App Check</a> with the <a href="https://developer.android.com/google/play/integrity" target="_blank" rel="noopener">Play Integrity API</a> to verify requests come from a genuine StatusCraft install.</p></div>
 
-    <section class="card" id="children">
-      <h2><span class="num">07</span> Children</h2>
-      <p>
-        StatusCraft is not directed at children under 13. We do not knowingly collect personal
-        information from children. If you believe a child has used the app and provided data to a
-        third-party service such as <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a>, please email us and we will help take appropriate
-        action.
-      </p>
-    </section>
+<div class="card"><h2><span class="num">10</span> Changes to this policy</h2>
+<p>When we change anything material we update the &ldquo;Last updated&rdquo; date and publish the new version at the same URL. Continued use after a revision means you accept the revised policy.</p></div>
 
-    <section class="card" id="rights">
-      <h2><span class="num">08</span> Your rights</h2>
-      <p>
-        Depending on where you live, you may have rights under the <a href="https://gdpr-info.eu/" target="_blank" rel="noopener">GDPR</a>, the <a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener">CCPA</a>, or similar local laws &mdash; to access, correct, delete, port, or restrict
-        the data we hold about you, and to withdraw any consent you previously gave. Because
-        StatusCraft does not store personally-identifying records on the server side, the most direct
-        way to exercise these rights is to:
-      </p>
-      <ul>
-        <li>Toggle off &ldquo;Usage analytics&rdquo; in <em>Settings</em> to stop Crashlytics &amp; Analytics collection going forward.</li>
-        <li>Use Android's &ldquo;Delete advertising ID&rdquo; control to disable personalized ads.</li>
-        <li>Uninstall the app to remove all local data.</li>
-        <li>Email us at the address below for any further request.</li>
-      </ul>
-    </section>
+<section class="contact" id="contact-en"><h2><span class="num">11</span> Contact us</h2>
+<p>Questions, requests, or concerns? Reach out and we&rsquo;ll respond within a reasonable time.</p>
+<a class="email" href="mailto:booklivre011@gmail.com">booklivre011@gmail.com</a>
+<p style="margin-top:14px;font-size:13px;color:var(--ink-3)">CONPLY · EL MAGHNOUJI HABIL · Morocco</p></section>
 
-    <section class="card" id="security">
-      <h2><span class="num">09</span> Security</h2>
-      <p>
-        Traffic between the app and Firebase travels over TLS 1.2+. We use <a href="https://firebase.google.com/docs/app-check" target="_blank" rel="noopener">Firebase App Check</a> with
-        the <a href="https://developer.android.com/google/play/integrity" target="_blank" rel="noopener">Play Integrity API</a> to verify that requests come from a genuine, unmodified
-        StatusCraft install. While we apply industry-standard safeguards, no system is perfectly
-        secure; please do not store sensitive secrets in your notes.
-      </p>
-    </section>
+<p class="footer">© 2026 CONPLY · StatusCraft</p>
+</div></main>
+</section>
 
-    <section class="card" id="changes">
-      <h2><span class="num">10</span> Changes to this policy</h2>
-      <p>
-        When we change anything material we update the &ldquo;Last updated&rdquo; date at the top and
-        publish the new version at the same URL. Continued use of StatusCraft after a revision means
-        you accept the revised policy.
-      </p>
-    </section>
+<!-- ========== ARABIC ========== -->
+<section class="lang-section" data-lang-section="ar">
+<header class="hero"><div class="container">
+<div class="brand"><div class="logo">SC</div><div class="brand-name">StatusCraft</div></div>
+<h1>سياسة <em>الخصوصية</em></h1>
+<p class="lede">صُمّم تطبيق تهاني وتبريكات ومذكرات بدون نت (StatusCraft) ليحترم بياناتك. هذه الصفحة تشرح ماذا نجمع، وماذا لا نجمع، والخدمات الخارجية المستخدَمة.</p>
+<div class="meta"><span class="pill"><span class="dot"></span> سارية اعتباراً من 6 مايو 2026</span><span class="pill">المطور · CONPLY</span></div>
+</div></header>
+<main class="wrap"><div class="container">
+<div class="card"><h2><span class="num">01</span> مقدّمة</h2>
+<p>تطبيق تهاني وتبريكات ومذكرات بدون نت (StatusCraft) (&laquo;التطبيق&raquo;) منشور تحت اسم <strong>CONPLY</strong>، يُديره <strong>EL MAGHNOUJI HABIL</strong> (المغرب). توضّح هذه السياسة المعلومات الشخصية التي نتعامل معها عند استخدامك التطبيق على Android، والخيارات المتاحة لك، والخدمات الخارجية التي تشغّل ميزات مثل مزامنة السحاب والإعلانات والإبلاغ عن الأعطال. باستخدامك التطبيق فأنت توافق على هذه الممارسات.</p>
+<p class="updated">آخر تحديث: 6 مايو 2026.</p></div>
 
-    <section class="contact" id="contact">
-      <h2><span class="num">11</span> Contact us</h2>
-      <p>Questions, requests, or concerns? Reach out and we&rsquo;ll respond within a reasonable time.</p>
-      <a class="email" href="mailto:artsahirsupport@gmail.com">artsahirsupport@gmail.com</a>
-    </section>
+<div class="card"><h2><span class="num">02</span> ماذا نجمع</h2>
+<p>التطبيق يعمل بدون حساب، فلا نطلب اسمك أو رقم هاتفك أو دفتر عناوينك أو موقعك. البيانات التي يراها التطبيق تنقسم إلى ثلاث فئات:</p>
+<h3>بيانات على الجهاز فقط (لا تغادر هاتفك)</h3>
+<ul><li>المفضّلات، المذكرات، الجداول اليومية، إعدادات الوضع/الإشعارات تُحفظ محلياً عبر <a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank" rel="noopener">DataStore</a> وقاعدة بيانات Room.</li><li>قائمة الإشعارات داخل التطبيق التي رفضتها وتصنيفات بحثك الأخيرة.</li></ul>
+<h3>بيانات مجمّعة غير معرّفة تُرسَل لخوادمنا</h3>
+<ul><li>عدد المشاركات والنسخ لكل عبارة لعرض قسم &laquo;الأكثر مشاركة&raquo;، عبر <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Firestore</a>. لا يُرفق أي معرّف مستخدم.</li></ul>
+<h3>بيانات تشخيصية وإحصائية (بعد موافقتك فقط)</h3>
+<ul><li>سجلات الأعطال عبر <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a> وعدّادات أحداث عبر <a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Google Analytics for Firebase</a>. كلاهما معطّل حتى تُفعّل خيار &laquo;إحصائيات الاستخدام&raquo; من <em>الإعدادات</em>.</li></ul></div>
 
-    <p class="footer">© 2026 ArtSahir · StatusCraft</p>
-  </div>
-</main>
+<div class="card"><h2><span class="num">03</span> كيف نستعملها</h2>
+<p>نستعمل البيانات لتشغيل وتأمين وتحسين StatusCraft فقط — لا لبناء ملفات إعلانية ولا لبيع المعلومات. تحديداً:</p>
+<ul><li>عرض المحتوى الذي طلبته.</li><li>تذكّر اللغة، الوضع، وتفضيلاتك.</li><li>إظهار اتجاهات المجتمع مثل &laquo;الأكثر مشاركة&raquo;.</li><li>تشخيص الأعطال (بموافقتك فقط).</li><li>عرض الإعلانات لإبقاء التطبيق مجانياً.</li></ul></div>
 
+<div class="card"><h2><span class="num">04</span> الخدمات الخارجية</h2>
+<p>يستعمل StatusCraft عدداً قليلاً من الخدمات المعتمدة. لكل واحدة سياستها:</p>
+<div class="services">
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></strong><small>خدمات نظام Android المطلوبة على الجهاز.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a></strong><small>Firestore, Remote Config, App Check, Cloud Messaging.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a></strong><small>إعلانات بانر، interstitial، native، وapp-open.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP SDK</a></strong><small>نموذج موافقة EU/UK/CH للإعلانات المخصّصة.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a></strong><small>تقارير الأعطال (اختياري).</small></div>
+<div class="svc"><strong><a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Analytics for Firebase</a></strong><small>أحداث استخدام مجمّعة (اختياري).</small></div>
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Play Integrity API</a></strong><small>تثبيت أصالة التطبيق عبر App Check.</small></div>
+</div></div>
+
+<div class="card"><h2><span class="num">05</span> الإعلانات والموافقة</h2>
+<p>يعرض StatusCraft إعلانات عبر <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a>. قد يجمع AdMob معرّفات محدودة (Android Advertising ID، IP، أحداث التفاعل مع الإعلان). لو كنت في الاتحاد الأوروبي أو المملكة المتحدة أو سويسرا، يستعمل التطبيق <a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">نموذج موافقة UMP</a> عند أول تشغيل. مفتاح Android 13+ &laquo;حذف معرّف الإعلانات&raquo; في <em>الإعدادات &lt; الخصوصية &lt; الإعلانات</em> يُحترَم تلقائياً.</p></div>
+
+<div class="card"><h2><span class="num">06</span> التخزين والاحتفاظ</h2>
+<p>البيانات المحلية تُمسَح عند إلغاء التثبيت أو مسح التخزين. عدّادات المشاركة في <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firestore</a> تبقى ما دامت الميزة عاملة. أحداث Crashlytics و Analytics تتبع نوافذ الاحتفاظ الافتراضية لـFirebase.</p></div>
+
+<div class="card"><h2><span class="num">07</span> الأطفال</h2>
+<p>التطبيق ليس موجّهاً للأطفال دون 13. لا نجمع عن قصد معلومات شخصية من الأطفال. لو علمت أن طفلاً استعمل التطبيق وقدّم بيانات لخدمة خارجية مثل <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a>، راسلنا.</p></div>
+
+<div class="card"><h2><span class="num">08</span> حقوقك</h2>
+<p>قد تتمتّع بحقوق بموجب <a href="https://gdpr-info.eu/" target="_blank" rel="noopener">GDPR</a> الأوروبي أو <a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener">CCPA</a> الأمريكي أو قوانين محلية مماثلة. لممارستها:</p>
+<ul><li>أوقف &laquo;إحصائيات الاستخدام&raquo; من <em>الإعدادات</em>.</li><li>استعمل &laquo;حذف معرّف الإعلانات&raquo; لمنع التخصيص.</li><li>ألغِ تثبيت التطبيق لإزالة جميع البيانات المحلية.</li><li>راسلنا للطلبات الإضافية.</li></ul></div>
+
+<div class="card"><h2><span class="num">09</span> الأمان</h2>
+<p>الاتصالات بين التطبيق وFirebase عبر TLS 1.2+. نستعمل <a href="https://firebase.google.com/docs/app-check" target="_blank" rel="noopener">Firebase App Check</a> مع <a href="https://developer.android.com/google/play/integrity" target="_blank" rel="noopener">Play Integrity API</a> لإثبات أن الطلبات تأتي من نسخة StatusCraft أصلية.</p></div>
+
+<div class="card"><h2><span class="num">10</span> التغييرات</h2>
+<p>عند أي تعديل جوهري، نحدّث تاريخ &laquo;آخر تحديث&raquo; وننشر النسخة الجديدة على نفس الرابط. الاستمرار باستعمال التطبيق بعد التعديل يعني الموافقة على النسخة المُعدَّلة.</p></div>
+
+<section class="contact"><h2><span class="num">11</span> تواصل معنا</h2>
+<p>أي سؤال أو طلب؟ تواصل معنا وسنرد في وقت معقول.</p>
+<a class="email" href="mailto:booklivre011@gmail.com">booklivre011@gmail.com</a>
+<p style="margin-top:14px;font-size:13px;color:var(--ink-3)">CONPLY · EL MAGHNOUJI HABIL · Morocco</p></section>
+
+<p class="footer">© 2026 CONPLY · StatusCraft</p>
+</div></main>
+</section>
+
+<!-- ========== SPANISH ========== -->
+<section class="lang-section" data-lang-section="es">
+<header class="hero"><div class="container">
+<div class="brand"><div class="logo">SC</div><div class="brand-name">StatusCraft</div></div>
+<h1>Política de <em>Privacidad</em></h1>
+<p class="lede">StatusCraft – Estados y Notas se construyó con respeto a tus datos. Esta página explica qué recopilamos, qué no, y los servicios externos que usamos.</p>
+<div class="meta"><span class="pill"><span class="dot"></span> Vigente desde el 6 de mayo de 2026</span><span class="pill">Desarrollador · CONPLY</span></div>
+</div></header>
+<main class="wrap"><div class="container">
+<div class="card"><h2><span class="num">01</span> Introducción</h2>
+<p>StatusCraft (&laquo;la app&raquo;) es publicada por <strong>CONPLY</strong>, operada por <strong>EL MAGHNOUJI HABIL</strong> (Marruecos). Esta política describe la información personal que tratamos cuando usas la app en Android, tus opciones, y los servicios externos que potencian funciones como sincronización en la nube, publicidad y reportes de fallos. Al usar StatusCraft aceptas estas prácticas.</p>
+<p class="updated">Última actualización: 6 de mayo de 2026.</p></div>
+
+<div class="card"><h2><span class="num">02</span> Qué recopilamos</h2>
+<p>StatusCraft funciona sin cuenta, así que no pedimos tu nombre, teléfono, agenda ni ubicación. Los datos que la app ve son tres tipos:</p>
+<h3>Datos en el dispositivo (nunca salen del teléfono)</h3>
+<ul><li>Favoritos, notas, agendas diarias y preferencias se guardan localmente con <a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank" rel="noopener">DataStore</a> y Room.</li><li>Lista de notificaciones descartadas y categorías de búsqueda recientes.</li></ul>
+<h3>Datos agregados sin identificar enviados a nuestro backend</h3>
+<ul><li>Conteos anónimos de compartir/copiar por frase para mostrar la sección &laquo;Más compartidas&raquo;, vía <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Firestore</a>. Sin id de usuario.</li></ul>
+<h3>Datos de diagnóstico y analítica (solo si aceptas)</h3>
+<ul><li>Reportes de fallos vía <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a> y eventos agregados vía <a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Google Analytics for Firebase</a>. Ambos desactivados hasta que actives &laquo;Estadísticas de uso&raquo; en <em>Ajustes</em>.</li></ul></div>
+
+<div class="card"><h2><span class="num">03</span> Cómo los usamos</h2>
+<p>Los datos solo sirven para operar, asegurar y mejorar StatusCraft — nunca para crear perfiles publicitarios ni vender información:</p>
+<ul><li>Mostrar el contenido solicitado.</li><li>Recordar tu idioma, tema y preferencias.</li><li>Mostrar tendencias como &laquo;Más compartidas&raquo;.</li><li>Diagnosticar fallos (solo con tu consentimiento).</li><li>Mostrar anuncios para mantener la app gratis.</li></ul></div>
+
+<div class="card"><h2><span class="num">04</span> Servicios externos</h2>
+<p>Cada servicio integrado tiene su propia política:</p>
+<div class="services">
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></strong><small>Servicios de sistema Android requeridos.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a></strong><small>Firestore, Remote Config, App Check, FCM.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a></strong><small>Banners, interstitiales, nativos y app-open.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP SDK</a></strong><small>Formulario de consentimiento EU/UK/CH.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a></strong><small>Reportes de fallos (opt-in).</small></div>
+<div class="svc"><strong><a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Analytics for Firebase</a></strong><small>Eventos de uso agregados (opt-in).</small></div>
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Play Integrity API</a></strong><small>Verifica autenticidad mediante App Check.</small></div>
+</div></div>
+
+<div class="card"><h2><span class="num">05</span> Anuncios y consentimiento</h2>
+<p>StatusCraft muestra anuncios mediante <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a>, que puede recopilar identificadores limitados (Android Advertising ID, IP, eventos de interacción). En EEE, Reino Unido o Suiza, la app usa el <a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">formulario UMP</a> al iniciar. El interruptor &laquo;Eliminar ID de publicidad&raquo; de Android 13+ se respeta automáticamente.</p></div>
+
+<div class="card"><h2><span class="num">06</span> Almacenamiento y retención</h2>
+<p>Los datos locales se borran al desinstalar o limpiar el almacenamiento. Los conteos anónimos en <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firestore</a> permanecen mientras la función esté activa. Crashlytics y Analytics siguen las ventanas predeterminadas de Firebase.</p></div>
+
+<div class="card"><h2><span class="num">07</span> Niños</h2>
+<p>StatusCraft no se dirige a menores de 13 años. No recopilamos información personal de niños deliberadamente. Si crees que un niño usó la app y proporcionó datos a un servicio externo como <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a>, escríbenos.</p></div>
+
+<div class="card"><h2><span class="num">08</span> Tus derechos</h2>
+<p>Según donde residas, puedes tener derechos bajo el <a href="https://gdpr-info.eu/" target="_blank" rel="noopener">RGPD</a>, la <a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener">CCPA</a> u otras leyes locales similares. Para ejercerlos:</p>
+<ul><li>Desactiva &laquo;Estadísticas de uso&raquo; en <em>Ajustes</em>.</li><li>Usa &laquo;Eliminar ID de publicidad&raquo; de Android.</li><li>Desinstala la app para borrar todos los datos locales.</li><li>Escríbenos para cualquier solicitud adicional.</li></ul></div>
+
+<div class="card"><h2><span class="num">09</span> Seguridad</h2>
+<p>El tráfico entre la app y Firebase usa TLS 1.2+. Empleamos <a href="https://firebase.google.com/docs/app-check" target="_blank" rel="noopener">Firebase App Check</a> con <a href="https://developer.android.com/google/play/integrity" target="_blank" rel="noopener">Play Integrity API</a> para verificar que las solicitudes provienen de una instalación genuina.</p></div>
+
+<div class="card"><h2><span class="num">10</span> Cambios</h2>
+<p>Cuando cambia algo material, actualizamos la fecha de &laquo;Última actualización&raquo; y publicamos la nueva versión en la misma URL. Continuar usando la app implica aceptar la versión revisada.</p></div>
+
+<section class="contact"><h2><span class="num">11</span> Contáctanos</h2>
+<p>¿Preguntas o solicitudes? Escríbenos y responderemos en un tiempo razonable.</p>
+<a class="email" href="mailto:booklivre011@gmail.com">booklivre011@gmail.com</a>
+<p style="margin-top:14px;font-size:13px;color:var(--ink-3)">CONPLY · EL MAGHNOUJI HABIL · Marruecos</p></section>
+
+<p class="footer">© 2026 CONPLY · StatusCraft</p>
+</div></main>
+</section>
+
+<!-- ========== FRENCH ========== -->
+<section class="lang-section" data-lang-section="fr">
+<header class="hero"><div class="container">
+<div class="brand"><div class="logo">SC</div><div class="brand-name">StatusCraft</div></div>
+<h1>Politique de <em>Confidentialité</em></h1>
+<p class="lede">StatusCraft – Statuts et Notes a été conçu pour respecter vos données. Cette page explique ce que nous collectons, ce que nous ne collectons pas et les services tiers utilisés.</p>
+<div class="meta"><span class="pill"><span class="dot"></span> Effective le 6 mai 2026</span><span class="pill">Développeur · CONPLY</span></div>
+</div></header>
+<main class="wrap"><div class="container">
+<div class="card"><h2><span class="num">01</span> Introduction</h2>
+<p>StatusCraft (&laquo;l'application&raquo;) est publiée par <strong>CONPLY</strong>, opérée par <strong>EL MAGHNOUJI HABIL</strong> (Maroc). Cette politique décrit les informations personnelles que nous traitons lorsque vous utilisez l'app sur Android, vos choix, et les services tiers qui alimentent des fonctions comme la synchronisation, la publicité et les rapports de plantage. En utilisant StatusCraft vous acceptez ces pratiques.</p>
+<p class="updated">Dernière mise à jour : 6 mai 2026.</p></div>
+
+<div class="card"><h2><span class="num">02</span> Ce que nous collectons</h2>
+<p>StatusCraft fonctionne sans compte, nous ne demandons donc pas nom, téléphone, carnet d'adresses ni position. Les données vues par l'app se répartissent en trois catégories :</p>
+<h3>Données sur l'appareil (ne quittent jamais le téléphone)</h3>
+<ul><li>Favoris, notes, emplois du temps et préférences sont stockés localement via <a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank" rel="noopener">DataStore</a> et Room.</li><li>Liste des notifications rejetées et catégories de recherche récentes.</li></ul>
+<h3>Données agrégées non identifiantes envoyées à notre backend</h3>
+<ul><li>Compteurs anonymes de partage/copie par phrase pour la rubrique &laquo;Plus partagées&raquo;, via <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Firestore</a>. Aucun identifiant d'utilisateur.</li></ul>
+<h3>Données de diagnostic et d'analyse (uniquement si vous acceptez)</h3>
+<ul><li>Rapports de plantage via <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a> et compteurs d'événements via <a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Google Analytics for Firebase</a>. Désactivés tant que vous n'activez pas &laquo;Statistiques d'utilisation&raquo; dans <em>Paramètres</em>.</li></ul></div>
+
+<div class="card"><h2><span class="num">03</span> Comment nous les utilisons</h2>
+<p>Les données servent uniquement à exploiter, sécuriser et améliorer StatusCraft — jamais pour créer des profils publicitaires ni vendre des informations :</p>
+<ul><li>Afficher le contenu demandé.</li><li>Mémoriser langue, thème et préférences.</li><li>Montrer les tendances comme &laquo;Plus partagées&raquo;.</li><li>Diagnostiquer les plantages (avec votre consentement).</li><li>Afficher des publicités pour garder l'app gratuite.</li></ul></div>
+
+<div class="card"><h2><span class="num">04</span> Services tiers</h2>
+<p>Chaque service intégré a sa propre politique :</p>
+<div class="services">
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></strong><small>Services système Android requis.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a></strong><small>Firestore, Remote Config, App Check, FCM.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a></strong><small>Bannières, interstitiels, natifs, app-open.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP SDK</a></strong><small>Formulaire de consentement EU/UK/CH.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a></strong><small>Rapports de plantage (opt-in).</small></div>
+<div class="svc"><strong><a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Analytics for Firebase</a></strong><small>Événements d'usage agrégés (opt-in).</small></div>
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Play Integrity API</a></strong><small>Vérification d'authenticité via App Check.</small></div>
+</div></div>
+
+<div class="card"><h2><span class="num">05</span> Publicité et consentement</h2>
+<p>StatusCraft affiche des publicités via <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a>, qui peut collecter des identifiants limités (Android Advertising ID, IP, événements). Dans l'EEE, le Royaume-Uni ou la Suisse, l'app utilise le <a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">formulaire UMP</a> au premier lancement. L'interrupteur &laquo;Supprimer l'identifiant publicitaire&raquo; d'Android 13+ est respecté automatiquement.</p></div>
+
+<div class="card"><h2><span class="num">06</span> Stockage et conservation</h2>
+<p>Les données locales sont effacées lors de la désinstallation. Les compteurs anonymes dans <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firestore</a> sont conservés tant que la fonction existe. Crashlytics et Analytics suivent les durées par défaut de Firebase.</p></div>
+
+<div class="card"><h2><span class="num">07</span> Enfants</h2>
+<p>StatusCraft ne s'adresse pas aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles d'enfants. Si vous pensez qu'un enfant a utilisé l'app et fourni des données à un service tiers comme <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a>, contactez-nous.</p></div>
+
+<div class="card"><h2><span class="num">08</span> Vos droits</h2>
+<p>Selon votre localisation, vous pouvez avoir des droits selon le <a href="https://gdpr-info.eu/" target="_blank" rel="noopener">RGPD</a>, le <a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener">CCPA</a> ou des lois locales similaires. Pour les exercer :</p>
+<ul><li>Désactivez &laquo;Statistiques d'utilisation&raquo; dans <em>Paramètres</em>.</li><li>Utilisez &laquo;Supprimer l'identifiant publicitaire&raquo; d'Android.</li><li>Désinstallez l'app pour supprimer toutes les données locales.</li><li>Contactez-nous pour toute demande complémentaire.</li></ul></div>
+
+<div class="card"><h2><span class="num">09</span> Sécurité</h2>
+<p>Le trafic entre l'app et Firebase passe par TLS 1.2+. Nous utilisons <a href="https://firebase.google.com/docs/app-check" target="_blank" rel="noopener">Firebase App Check</a> avec <a href="https://developer.android.com/google/play/integrity" target="_blank" rel="noopener">Play Integrity API</a> pour vérifier que les requêtes proviennent d'une installation authentique.</p></div>
+
+<div class="card"><h2><span class="num">10</span> Modifications</h2>
+<p>En cas de modification importante, nous mettons à jour la date et publions la nouvelle version à la même URL. Continuer à utiliser l'app vaut acceptation.</p></div>
+
+<section class="contact"><h2><span class="num">11</span> Nous contacter</h2>
+<p>Questions ou demandes ? Contactez-nous, nous répondrons dans un délai raisonnable.</p>
+<a class="email" href="mailto:booklivre011@gmail.com">booklivre011@gmail.com</a>
+<p style="margin-top:14px;font-size:13px;color:var(--ink-3)">CONPLY · EL MAGHNOUJI HABIL · Maroc</p></section>
+
+<p class="footer">© 2026 CONPLY · StatusCraft</p>
+</div></main>
+</section>
+
+<!-- ========== ITALIAN ========== -->
+<section class="lang-section" data-lang-section="it">
+<header class="hero"><div class="container">
+<div class="brand"><div class="logo">SC</div><div class="brand-name">StatusCraft</div></div>
+<h1>Informativa sulla <em>Privacy</em></h1>
+<p class="lede">StatusCraft – Stati e Note è progettata per rispettare i tuoi dati. Questa pagina spiega cosa raccogliamo, cosa no, e i servizi terzi utilizzati.</p>
+<div class="meta"><span class="pill"><span class="dot"></span> In vigore dal 6 maggio 2026</span><span class="pill">Sviluppatore · CONPLY</span></div>
+</div></header>
+<main class="wrap"><div class="container">
+<div class="card"><h2><span class="num">01</span> Introduzione</h2>
+<p>StatusCraft (&laquo;l'app&raquo;) è pubblicata da <strong>CONPLY</strong>, operata da <strong>EL MAGHNOUJI HABIL</strong> (Marocco). Questa informativa descrive le informazioni personali che gestiamo quando usi l'app su Android, le tue scelte e i servizi terzi che alimentano funzioni come sincronizzazione, pubblicità e segnalazione errori. Usando StatusCraft accetti queste pratiche.</p>
+<p class="updated">Ultimo aggiornamento: 6 maggio 2026.</p></div>
+
+<div class="card"><h2><span class="num">02</span> Cosa raccogliamo</h2>
+<p>StatusCraft funziona senza account, quindi non chiediamo nome, telefono, rubrica o posizione. I dati visibili all'app sono di tre tipi:</p>
+<h3>Dati sul dispositivo (non lasciano il telefono)</h3>
+<ul><li>Preferiti, note, programmi e preferenze salvati localmente con <a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank" rel="noopener">DataStore</a> e Room.</li><li>Elenco notifiche scartate e categorie di ricerca recenti.</li></ul>
+<h3>Dati aggregati non identificanti inviati al backend</h3>
+<ul><li>Conteggi anonimi di condivisioni/copie per frase per la sezione &laquo;Più condivise&raquo;, tramite <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Firestore</a>. Senza id utente.</li></ul>
+<h3>Dati diagnostici e di analisi (solo dopo consenso)</h3>
+<ul><li>Log dei crash via <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a> ed eventi via <a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Google Analytics for Firebase</a>. Disattivati finché non attivi &laquo;Statistiche di utilizzo&raquo; in <em>Impostazioni</em>.</li></ul></div>
+
+<div class="card"><h2><span class="num">03</span> Come li usiamo</h2>
+<p>I dati servono solo per gestire, proteggere e migliorare StatusCraft — mai per creare profili pubblicitari o vendere informazioni:</p>
+<ul><li>Mostrare i contenuti richiesti.</li><li>Ricordare lingua, tema e preferenze.</li><li>Mostrare tendenze come &laquo;Più condivise&raquo;.</li><li>Diagnosticare crash (solo con consenso).</li><li>Mostrare annunci per mantenere l'app gratuita.</li></ul></div>
+
+<div class="card"><h2><span class="num">04</span> Servizi terzi</h2>
+<p>Ogni servizio integrato ha la propria informativa:</p>
+<div class="services">
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></strong><small>Servizi di sistema Android richiesti.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a></strong><small>Firestore, Remote Config, App Check, FCM.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a></strong><small>Banner, interstiziali, native, app-open.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP SDK</a></strong><small>Modulo consenso EU/UK/CH.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a></strong><small>Report crash (opt-in).</small></div>
+<div class="svc"><strong><a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Analytics for Firebase</a></strong><small>Eventi di utilizzo aggregati (opt-in).</small></div>
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Play Integrity API</a></strong><small>Verifica autenticità via App Check.</small></div>
+</div></div>
+
+<div class="card"><h2><span class="num">05</span> Annunci e consenso</h2>
+<p>StatusCraft mostra annunci tramite <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a>, che può raccogliere identificatori limitati (Android Advertising ID, IP, eventi di interazione). In SEE, Regno Unito o Svizzera, l'app usa il <a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">modulo UMP</a> al primo avvio. L'interruttore &laquo;Elimina ID pubblicitario&raquo; di Android 13+ è rispettato automaticamente.</p></div>
+
+<div class="card"><h2><span class="num">06</span> Archiviazione e conservazione</h2>
+<p>I dati locali si cancellano disinstallando o pulendo lo storage. I conteggi anonimi in <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firestore</a> restano finché la funzione è attiva. Crashlytics e Analytics seguono le finestre di conservazione predefinite di Firebase.</p></div>
+
+<div class="card"><h2><span class="num">07</span> Bambini</h2>
+<p>StatusCraft non è rivolta a bambini sotto i 13 anni. Non raccogliamo consapevolmente informazioni personali da bambini. Se ritieni che un bambino abbia usato l'app e fornito dati a un servizio terzo come <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a>, contattaci.</p></div>
+
+<div class="card"><h2><span class="num">08</span> I tuoi diritti</h2>
+<p>A seconda della residenza, puoi avere diritti ai sensi del <a href="https://gdpr-info.eu/" target="_blank" rel="noopener">GDPR</a>, della <a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener">CCPA</a> o leggi locali simili. Per esercitarli:</p>
+<ul><li>Disattiva &laquo;Statistiche di utilizzo&raquo; in <em>Impostazioni</em>.</li><li>Usa &laquo;Elimina ID pubblicitario&raquo; di Android.</li><li>Disinstalla l'app per cancellare tutti i dati locali.</li><li>Contattaci per ulteriori richieste.</li></ul></div>
+
+<div class="card"><h2><span class="num">09</span> Sicurezza</h2>
+<p>Il traffico tra l'app e Firebase usa TLS 1.2+. Usiamo <a href="https://firebase.google.com/docs/app-check" target="_blank" rel="noopener">Firebase App Check</a> con <a href="https://developer.android.com/google/play/integrity" target="_blank" rel="noopener">Play Integrity API</a> per verificare che le richieste provengano da un'installazione autentica.</p></div>
+
+<div class="card"><h2><span class="num">10</span> Modifiche</h2>
+<p>In caso di modifiche sostanziali, aggiorneremo la data e pubblicheremo la nuova versione allo stesso URL. L'uso continuato implica accettazione.</p></div>
+
+<section class="contact"><h2><span class="num">11</span> Contattaci</h2>
+<p>Domande o richieste? Scrivici, risponderemo in tempi ragionevoli.</p>
+<a class="email" href="mailto:booklivre011@gmail.com">booklivre011@gmail.com</a>
+<p style="margin-top:14px;font-size:13px;color:var(--ink-3)">CONPLY · EL MAGHNOUJI HABIL · Marocco</p></section>
+
+<p class="footer">© 2026 CONPLY · StatusCraft</p>
+</div></main>
+</section>
+
+<!-- ========== PORTUGUESE ========== -->
+<section class="lang-section" data-lang-section="pt">
+<header class="hero"><div class="container">
+<div class="brand"><div class="logo">SC</div><div class="brand-name">StatusCraft</div></div>
+<h1>Política de <em>Privacidade</em></h1>
+<p class="lede">StatusCraft – Status e Notas foi criada para respeitar seus dados. Esta página explica o que coletamos, o que não coletamos e os serviços externos utilizados.</p>
+<div class="meta"><span class="pill"><span class="dot"></span> Vigente desde 6 de maio de 2026</span><span class="pill">Desenvolvedor · CONPLY</span></div>
+</div></header>
+<main class="wrap"><div class="container">
+<div class="card"><h2><span class="num">01</span> Introdução</h2>
+<p>StatusCraft (&laquo;o app&raquo;) é publicado por <strong>CONPLY</strong>, operado por <strong>EL MAGHNOUJI HABIL</strong> (Marrocos). Esta política descreve as informações pessoais que tratamos quando você usa o app no Android, suas escolhas, e os serviços externos que alimentam funções como sincronização, publicidade e relatórios de erros. Ao usar StatusCraft você concorda com estas práticas.</p>
+<p class="updated">Última atualização: 6 de maio de 2026.</p></div>
+
+<div class="card"><h2><span class="num">02</span> O que coletamos</h2>
+<p>StatusCraft funciona sem conta, então não pedimos nome, telefone, agenda ou localização. Os dados vistos pelo app são de três tipos:</p>
+<h3>Dados no dispositivo (nunca saem do telefone)</h3>
+<ul><li>Favoritos, notas, agendas e preferências guardados localmente via <a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank" rel="noopener">DataStore</a> e Room.</li><li>Lista de notificações descartadas e categorias de busca recentes.</li></ul>
+<h3>Dados agregados sem identificação enviados ao backend</h3>
+<ul><li>Contagens anônimas de compartilhamentos/cópias por frase para a seção &laquo;Mais compartilhadas&raquo;, via <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Firestore</a>. Sem id de usuário.</li></ul>
+<h3>Dados de diagnóstico e análise (apenas com consentimento)</h3>
+<ul><li>Logs de erro via <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a> e eventos via <a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Google Analytics for Firebase</a>. Desativados até você ativar &laquo;Estatísticas de uso&raquo; em <em>Configurações</em>.</li></ul></div>
+
+<div class="card"><h2><span class="num">03</span> Como usamos</h2>
+<p>Os dados servem apenas para operar, proteger e melhorar o StatusCraft — nunca para criar perfis publicitários ou vender informações:</p>
+<ul><li>Exibir o conteúdo solicitado.</li><li>Lembrar idioma, tema e preferências.</li><li>Mostrar tendências como &laquo;Mais compartilhadas&raquo;.</li><li>Diagnosticar erros (com seu consentimento).</li><li>Exibir anúncios para manter o app gratuito.</li></ul></div>
+
+<div class="card"><h2><span class="num">04</span> Serviços externos</h2>
+<p>Cada serviço integrado tem sua própria política:</p>
+<div class="services">
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></strong><small>Serviços de sistema Android necessários.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a></strong><small>Firestore, Remote Config, App Check, FCM.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a></strong><small>Banners, intersticiais, nativos, app-open.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP SDK</a></strong><small>Formulário de consentimento EU/UK/CH.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a></strong><small>Relatórios de erro (opt-in).</small></div>
+<div class="svc"><strong><a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Analytics for Firebase</a></strong><small>Eventos de uso agregados (opt-in).</small></div>
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Play Integrity API</a></strong><small>Verifica autenticidade via App Check.</small></div>
+</div></div>
+
+<div class="card"><h2><span class="num">05</span> Anúncios e consentimento</h2>
+<p>StatusCraft exibe anúncios via <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a>, que pode coletar identificadores limitados (Android Advertising ID, IP, eventos). Em EEE, Reino Unido ou Suíça, o app usa o <a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">formulário UMP</a> no primeiro uso. O interruptor &laquo;Excluir ID de publicidade&raquo; do Android 13+ é respeitado automaticamente.</p></div>
+
+<div class="card"><h2><span class="num">06</span> Armazenamento e retenção</h2>
+<p>Os dados locais são apagados ao desinstalar ou limpar armazenamento. Contagens anônimas no <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firestore</a> permanecem enquanto o recurso existir. Crashlytics e Analytics seguem as janelas padrão do Firebase.</p></div>
+
+<div class="card"><h2><span class="num">07</span> Crianças</h2>
+<p>StatusCraft não se destina a menores de 13 anos. Não coletamos conscientemente informações pessoais de crianças. Se acreditar que uma criança usou o app e forneceu dados a um serviço externo como <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a>, fale conosco.</p></div>
+
+<div class="card"><h2><span class="num">08</span> Seus direitos</h2>
+<p>Conforme sua residência, você pode ter direitos sob o <a href="https://gdpr-info.eu/" target="_blank" rel="noopener">GDPR</a>, a <a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener">CCPA</a> ou leis locais similares. Para exercê-los:</p>
+<ul><li>Desative &laquo;Estatísticas de uso&raquo; em <em>Configurações</em>.</li><li>Use &laquo;Excluir ID de publicidade&raquo; do Android.</li><li>Desinstale o app para apagar todos os dados locais.</li><li>Fale conosco para outras solicitações.</li></ul></div>
+
+<div class="card"><h2><span class="num">09</span> Segurança</h2>
+<p>O tráfego entre o app e o Firebase usa TLS 1.2+. Usamos <a href="https://firebase.google.com/docs/app-check" target="_blank" rel="noopener">Firebase App Check</a> com <a href="https://developer.android.com/google/play/integrity" target="_blank" rel="noopener">Play Integrity API</a> para verificar que as solicitações vêm de uma instalação autêntica.</p></div>
+
+<div class="card"><h2><span class="num">10</span> Mudanças</h2>
+<p>Em caso de mudanças significativas, atualizaremos a data e publicaremos a nova versão na mesma URL. O uso continuado implica aceitação.</p></div>
+
+<section class="contact"><h2><span class="num">11</span> Fale conosco</h2>
+<p>Dúvidas ou solicitações? Escreva, responderemos em tempo razoável.</p>
+<a class="email" href="mailto:booklivre011@gmail.com">booklivre011@gmail.com</a>
+<p style="margin-top:14px;font-size:13px;color:var(--ink-3)">CONPLY · EL MAGHNOUJI HABIL · Marrocos</p></section>
+
+<p class="footer">© 2026 CONPLY · StatusCraft</p>
+</div></main>
+</section>
+
+<!-- ========== GERMAN ========== -->
+<section class="lang-section" data-lang-section="de">
+<header class="hero"><div class="container">
+<div class="brand"><div class="logo">SC</div><div class="brand-name">StatusCraft</div></div>
+<h1>Daten<em>schutz</em></h1>
+<p class="lede">StatusCraft – Status &amp; Notizen wurde mit Respekt für deine Daten entwickelt. Diese Seite erklärt, was wir erfassen, was nicht, und welche Drittanbieter wir nutzen.</p>
+<div class="meta"><span class="pill"><span class="dot"></span> Gültig ab 6. Mai 2026</span><span class="pill">Entwickler · CONPLY</span></div>
+</div></header>
+<main class="wrap"><div class="container">
+<div class="card"><h2><span class="num">01</span> Einleitung</h2>
+<p>StatusCraft (&bdquo;die App&ldquo;) wird von <strong>CONPLY</strong> herausgegeben und von <strong>EL MAGHNOUJI HABIL</strong> (Marokko) betrieben. Diese Richtlinie beschreibt die personenbezogenen Daten, die wir verarbeiten, deine Wahlmöglichkeiten und die Drittanbieter-Dienste, die Funktionen wie Cloud-Sync, Werbung und Absturzberichte ermöglichen. Mit der Nutzung akzeptierst du diese Praktiken.</p>
+<p class="updated">Zuletzt aktualisiert: 6. Mai 2026.</p></div>
+
+<div class="card"><h2><span class="num">02</span> Was wir erfassen</h2>
+<p>StatusCraft funktioniert ohne Konto. Wir fragen nicht nach Name, Telefonnummer, Adressbuch oder Standort. Die Daten teilen sich in drei Kategorien:</p>
+<h3>Daten auf dem Gerät (verlassen das Handy nie)</h3>
+<ul><li>Favoriten, Notizen, Tagespläne und Einstellungen werden lokal über <a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank" rel="noopener">DataStore</a> und Room gespeichert.</li><li>Liste verworfener In-App-Benachrichtigungen und letzte Suchkategorien.</li></ul>
+<h3>Aggregierte, nicht identifizierende Daten an unser Backend</h3>
+<ul><li>Anonyme Teilen/Kopieren-Zähler pro Phrase für die Sektion &bdquo;Am häufigsten geteilt&ldquo;, via <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Firestore</a>. Ohne Nutzer-ID.</li></ul>
+<h3>Diagnose- und Analysedaten (nur mit Zustimmung)</h3>
+<ul><li>Absturzlogs via <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a> und Ereigniszähler via <a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Google Analytics for Firebase</a>. Beide deaktiviert, bis du &bdquo;Nutzungsstatistik&ldquo; in den <em>Einstellungen</em> aktivierst.</li></ul></div>
+
+<div class="card"><h2><span class="num">03</span> Wie wir sie nutzen</h2>
+<p>Die Daten dienen ausschließlich dem Betrieb, der Sicherheit und der Verbesserung von StatusCraft — niemals für Werbeprofile oder Verkauf:</p>
+<ul><li>Angeforderte Inhalte anzeigen.</li><li>Sprache, Design und Präferenzen merken.</li><li>Trends wie &bdquo;Am häufigsten geteilt&ldquo; zeigen.</li><li>Abstürze diagnostizieren (nur mit Zustimmung).</li><li>Anzeigen schalten, um die App kostenlos zu halten.</li></ul></div>
+
+<div class="card"><h2><span class="num">04</span> Drittanbieter-Dienste</h2>
+<p>Jeder integrierte Dienst hat seine eigene Richtlinie:</p>
+<div class="services">
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></strong><small>Erforderliche Android-Systemdienste.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a></strong><small>Firestore, Remote Config, App Check, FCM.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a></strong><small>Banner-, Interstitial-, Native- und App-Open-Anzeigen.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP SDK</a></strong><small>EU/UK/CH-Einwilligungsformular.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a></strong><small>Absturzberichte (opt-in).</small></div>
+<div class="svc"><strong><a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Analytics for Firebase</a></strong><small>Aggregierte Nutzungsereignisse (opt-in).</small></div>
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Play Integrity API</a></strong><small>Echtheitsprüfung über App Check.</small></div>
+</div></div>
+
+<div class="card"><h2><span class="num">05</span> Anzeigen und Einwilligung</h2>
+<p>StatusCraft zeigt Anzeigen via <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a>, das begrenzte Kennungen erfassen kann (Android Advertising ID, IP, Interaktionsereignisse). Im EWR, UK oder Schweiz nutzt die App das <a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">UMP-Einwilligungsformular</a> beim Erststart. Der &bdquo;Werbe-ID löschen&ldquo;-Schalter unter Android 13+ wird automatisch berücksichtigt.</p></div>
+
+<div class="card"><h2><span class="num">06</span> Speicherung und Aufbewahrung</h2>
+<p>Lokale Daten werden bei Deinstallation oder Speicherbereinigung gelöscht. Anonyme Zähler in <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firestore</a> bleiben, solange die Funktion existiert. Crashlytics und Analytics folgen den Standardaufbewahrungsfristen von Firebase.</p></div>
+
+<div class="card"><h2><span class="num">07</span> Kinder</h2>
+<p>StatusCraft richtet sich nicht an Kinder unter 13. Wir erfassen keine personenbezogenen Daten von Kindern. Wenn du glaubst, dass ein Kind die App genutzt und einem Drittanbieter wie <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a> Daten gegeben hat, schreib uns.</p></div>
+
+<div class="card"><h2><span class="num">08</span> Deine Rechte</h2>
+<p>Je nach Wohnort hast du Rechte aus <a href="https://gdpr-info.eu/" target="_blank" rel="noopener">DSGVO</a>, <a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener">CCPA</a> oder ähnlichen lokalen Gesetzen. Zur Ausübung:</p>
+<ul><li>&bdquo;Nutzungsstatistik&ldquo; in <em>Einstellungen</em> deaktivieren.</li><li>&bdquo;Werbe-ID löschen&ldquo; von Android nutzen.</li><li>App deinstallieren, um lokale Daten zu entfernen.</li><li>Für weitere Anfragen schreib uns.</li></ul></div>
+
+<div class="card"><h2><span class="num">09</span> Sicherheit</h2>
+<p>Verkehr zwischen App und Firebase erfolgt via TLS 1.2+. Wir nutzen <a href="https://firebase.google.com/docs/app-check" target="_blank" rel="noopener">Firebase App Check</a> mit <a href="https://developer.android.com/google/play/integrity" target="_blank" rel="noopener">Play Integrity API</a>, um zu verifizieren, dass Anfragen aus einer echten Installation kommen.</p></div>
+
+<div class="card"><h2><span class="num">10</span> Änderungen</h2>
+<p>Bei wesentlichen Änderungen aktualisieren wir das Datum und veröffentlichen die neue Version unter derselben URL. Weiternutzung gilt als Zustimmung.</p></div>
+
+<section class="contact"><h2><span class="num">11</span> Kontakt</h2>
+<p>Fragen oder Anliegen? Schreib uns, wir antworten in angemessener Zeit.</p>
+<a class="email" href="mailto:booklivre011@gmail.com">booklivre011@gmail.com</a>
+<p style="margin-top:14px;font-size:13px;color:var(--ink-3)">CONPLY · EL MAGHNOUJI HABIL · Marokko</p></section>
+
+<p class="footer">© 2026 CONPLY · StatusCraft</p>
+</div></main>
+</section>
+
+<!-- ========== TURKISH ========== -->
+<section class="lang-section" data-lang-section="tr">
+<header class="hero"><div class="container">
+<div class="brand"><div class="logo">SC</div><div class="brand-name">StatusCraft</div></div>
+<h1>Gizlilik <em>Politikası</em></h1>
+<p class="lede">StatusCraft – Durumlar ve Notlar verilerinize saygı duyacak şekilde tasarlandı. Bu sayfa neyi topladığımızı, neyi toplamadığımızı ve kullandığımız üçüncü taraf hizmetlerini açıklar.</p>
+<div class="meta"><span class="pill"><span class="dot"></span> 6 Mayıs 2026 itibarıyla geçerli</span><span class="pill">Geliştirici · CONPLY</span></div>
+</div></header>
+<main class="wrap"><div class="container">
+<div class="card"><h2><span class="num">01</span> Giriş</h2>
+<p>StatusCraft (&laquo;uygulama&raquo;), <strong>CONPLY</strong> tarafından yayımlanır ve <strong>EL MAGHNOUJI HABIL</strong> (Fas) tarafından işletilir. Bu politika, uygulamayı Android'de kullandığınızda işlediğimiz kişisel bilgileri, seçeneklerinizi ve bulut senkronizasyonu, reklam, hata raporlama gibi özellikleri çalıştıran üçüncü taraf hizmetleri tanımlar. StatusCraft'ı kullanarak bu uygulamaları kabul etmiş olursunuz.</p>
+<p class="updated">Son güncelleme: 6 Mayıs 2026.</p></div>
+
+<div class="card"><h2><span class="num">02</span> Ne topluyoruz</h2>
+<p>StatusCraft hesapsız çalışır; isminizi, telefonunuzu, rehberinizi veya konumunuzu istemeyiz. Uygulamanın gördüğü veriler üç kategoride:</p>
+<h3>Cihazdaki veriler (telefondan ayrılmaz)</h3>
+<ul><li>Favoriler, notlar, günlük programlar ve tema/bildirim tercihleri <a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank" rel="noopener">DataStore</a> ve Room ile yerel olarak saklanır.</li><li>Reddedilen uygulama içi bildirimler ve son arama kategorileri listesi.</li></ul>
+<h3>Backend'imize gönderilen toplu, kimliklendirilmemiş veriler</h3>
+<ul><li>&laquo;En çok paylaşılan&raquo; bölümü için ifade başına anonim paylaşım/kopyalama sayıları, <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Firestore</a> üzerinden. Kullanıcı kimliği yok.</li></ul>
+<h3>Tanılama ve analiz verileri (yalnızca onay verirseniz)</h3>
+<ul><li>Hata kayıtları <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a> ve toplu olay sayaçları <a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Google Analytics for Firebase</a> üzerinden. <em>Ayarlar</em> içinde &laquo;Kullanım istatistikleri&raquo;'ni etkinleştirene kadar her ikisi de kapalı.</li></ul></div>
+
+<div class="card"><h2><span class="num">03</span> Nasıl kullanırız</h2>
+<p>Veriler yalnızca StatusCraft'ı çalıştırmak, korumak ve geliştirmek için kullanılır — reklam profilleri oluşturmak veya bilgi satmak için asla:</p>
+<ul><li>İstediğiniz içeriği göstermek.</li><li>Dilinizi, temanızı ve tercihlerinizi hatırlamak.</li><li>&laquo;En çok paylaşılan&raquo; gibi trendleri göstermek.</li><li>Hataları teşhis etmek (onayınızla).</li><li>Uygulamayı ücretsiz tutmak için reklam göstermek.</li></ul></div>
+
+<div class="card"><h2><span class="num">04</span> Üçüncü taraf hizmetleri</h2>
+<p>Her hizmetin kendi politikası vardır:</p>
+<div class="services">
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></strong><small>Gerekli Android sistem hizmetleri.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a></strong><small>Firestore, Remote Config, App Check, FCM.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a></strong><small>Banner, geçiş, yerel ve app-open reklamları.</small></div>
+<div class="svc"><strong><a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">Google UMP SDK</a></strong><small>EU/UK/CH onay formu.</small></div>
+<div class="svc"><strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a></strong><small>Hata raporları (opt-in).</small></div>
+<div class="svc"><strong><a href="https://support.google.com/analytics/answer/2763052" target="_blank" rel="noopener">Analytics for Firebase</a></strong><small>Toplu kullanım olayları (opt-in).</small></div>
+<div class="svc"><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Play Integrity API</a></strong><small>App Check üzerinden özgünlük doğrulaması.</small></div>
+</div></div>
+
+<div class="card"><h2><span class="num">05</span> Reklamlar ve onay</h2>
+<p>StatusCraft, <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a> aracılığıyla reklam gösterir; AdMob sınırlı kimlikler toplayabilir (Android Advertising ID, IP, etkileşim olayları). AB, BK veya İsviçre'de iseniz, uygulama ilk açılışta <a href="https://support.google.com/admob/answer/9760862" target="_blank" rel="noopener">UMP onay formunu</a> kullanır. Android 13+ &laquo;Reklam kimliğini sil&raquo; düğmesi otomatik olarak saygı görür.</p></div>
+
+<div class="card"><h2><span class="num">06</span> Saklama</h2>
+<p>Yerel veriler kaldırma veya depolamayı temizlemede silinir. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firestore</a>'daki anonim sayımlar özellik var olduğu sürece kalır. Crashlytics ve Analytics, Firebase'in varsayılan saklama pencerelerini takip eder.</p></div>
+
+<div class="card"><h2><span class="num">07</span> Çocuklar</h2>
+<p>StatusCraft 13 yaş altı çocuklara yönelik değildir. Bilerek çocuklardan kişisel bilgi toplamayız. Bir çocuğun uygulamayı kullandığını ve <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a> gibi bir hizmete veri verdiğini düşünüyorsanız bize yazın.</p></div>
+
+<div class="card"><h2><span class="num">08</span> Haklarınız</h2>
+<p>Yaşadığınız yere göre <a href="https://gdpr-info.eu/" target="_blank" rel="noopener">GDPR</a>, <a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener">CCPA</a> veya benzer yerel yasalar kapsamında haklarınız olabilir. Bu hakları kullanmak için:</p>
+<ul><li><em>Ayarlar</em>'da &laquo;Kullanım istatistikleri&raquo;'ni kapatın.</li><li>Android'in &laquo;Reklam kimliğini sil&raquo; özelliğini kullanın.</li><li>Tüm yerel verileri silmek için uygulamayı kaldırın.</li><li>Diğer talepler için bize yazın.</li></ul></div>
+
+<div class="card"><h2><span class="num">09</span> Güvenlik</h2>
+<p>Uygulama ile Firebase arasındaki trafik TLS 1.2+ üzerinden geçer. Taleplerin gerçek bir StatusCraft yüklemesinden geldiğini doğrulamak için <a href="https://firebase.google.com/docs/app-check" target="_blank" rel="noopener">Firebase App Check</a> ve <a href="https://developer.android.com/google/play/integrity" target="_blank" rel="noopener">Play Integrity API</a> kullanırız.</p></div>
+
+<div class="card"><h2><span class="num">10</span> Değişiklikler</h2>
+<p>Önemli değişikliklerde tarihi güncelleriz ve yeni sürümü aynı URL'de yayınlarız. Devam eden kullanım kabul anlamına gelir.</p></div>
+
+<section class="contact"><h2><span class="num">11</span> Bize ulaşın</h2>
+<p>Soru veya talep? Bize yazın, makul sürede yanıt veririz.</p>
+<a class="email" href="mailto:booklivre011@gmail.com">booklivre011@gmail.com</a>
+<p style="margin-top:14px;font-size:13px;color:var(--ink-3)">CONPLY · EL MAGHNOUJI HABIL · Fas</p></section>
+
+<p class="footer">© 2026 CONPLY · StatusCraft</p>
+</div></main>
+</section>
+
+<script>
+  (function(){
+    var buttons = document.querySelectorAll('.langbtn');
+    var sections = document.querySelectorAll('.lang-section');
+    function activate(lang){
+      buttons.forEach(function(b){b.classList.toggle('active', b.dataset.lang === lang);});
+      sections.forEach(function(s){s.classList.toggle('active', s.dataset.langSection === lang);});
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      try { localStorage.setItem('sc_lang', lang); } catch(e){}
+      try { history.replaceState(null, '', '#' + lang); } catch(e){}
+    }
+    buttons.forEach(function(b){b.addEventListener('click', function(){activate(b.dataset.lang);});});
+    var initial = (location.hash || '').replace('#','');
+    if (!initial) { try { initial = localStorage.getItem('sc_lang') || ''; } catch(e){} }
+    if (!initial) {
+      var nav = (navigator.language || 'en').slice(0,2).toLowerCase();
+      var supported = ['en','ar','es','fr','it','pt','de','tr'];
+      initial = supported.indexOf(nav) >= 0 ? nav : 'en';
+    }
+    activate(initial);
+  })();
+</script>
 </body>
 </html>
